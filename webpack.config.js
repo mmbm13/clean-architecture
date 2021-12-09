@@ -10,6 +10,11 @@ module.exports = {
   name: 'express-server',
   entry: './src/index.ts',
   target: 'node',
+  context: __dirname,
+  node: {
+    __filename: true,
+    __dirname: true
+  },
   mode: NODE_ENV,
   externals: [nodeExternals()],
   output: {
